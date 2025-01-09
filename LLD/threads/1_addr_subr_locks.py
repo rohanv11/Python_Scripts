@@ -1,8 +1,6 @@
 import threading
 
-
-
-global shared_var
+shared_var = 0
 # lock = threading.Lock()
 
 
@@ -23,7 +21,7 @@ def subr(n):
 
 
 shared_var = 0
-n = 1000000
+n = 10000000
 
 t1 = threading.Thread(target=addr, args=(n,))
 t2 = threading.Thread(target=subr, args=(n,))
